@@ -1,0 +1,25 @@
+path="$1"
+for i in ${path}/*
+do
+    echo "$i"
+    
+    if test -f $i
+    then echo "Файл"
+    fi
+    
+    if test -d $i
+    then echo "Каталог"
+    fi
+    
+    if test -r $i	
+    then echo "Разрешено чтение"
+    fi
+    
+    if test -w $i
+    then echo "Разрешена запись"
+    fi
+    
+    if test -x $i
+    then echo "Разрешено исполнение"
+    fi
+done
